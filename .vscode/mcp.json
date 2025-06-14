@@ -1,0 +1,98 @@
+{
+    "servers": {
+        "chroma": {
+            "command": "uvx",
+            "args": [
+                "chroma-mcp",
+                "--client-type",
+                "persistent",
+                "--data-dir",
+                "./chroma_data"
+            ]
+        },
+        "playwright": {
+            "command": "npx",
+            "args": [
+                "@playwright/mcp@latest",
+                "--browser",
+                "firefox",
+                "--viewport-size",
+                "1920,1080",
+                "--ignore-https-errors",
+                "--save-trace",
+                "--output-dir",
+                "./playwright-outputs",
+                "--caps",
+                "tabs,pdf,history,wait,files,install"
+            ]
+        },
+        "context7": {
+            "command": "npx",
+            "args": ["-y", "@upstash/context7-mcp"],
+            "env": {
+                "DEFAULT_MINIMUM_TOKENS": "10000"
+            }
+        },
+        "tree-sitter": {
+            "command": "mcp-server-tree-sitter",
+            "env": {}
+        },
+        "dbhub-mysql-productivity-hub": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@bytebase/dbhub",
+                "--transport",
+                "stdio",
+                "--dsn",
+                "mysql://root:MySql1234@localhost:3306/productivity_hub?sslmode=disable"
+            ],
+            "env": {
+                "DSN": "mysql://root:MySql1234@localhost:3306/productivity_hub?sslmode=disable"
+            }
+        },
+        // "dbhub-mysql-productivity-hub-readonly": {
+        //     "command": "npx",
+        //     "args": [
+        //         "-y",
+        //         "@bytebase/dbhub",
+        //         "--transport",
+        //         "stdio",
+        //         "--readonly",
+        //         "--dsn",
+        //         "mysql://root:MySql1234@localhost:3306/productivity_hub?sslmode=disable"
+        //     ],
+        //     "env": {
+        //         "DSN": "mysql://root:MySql1234@localhost:3306/productivity_hub?sslmode=disable"
+        //     }
+        // },
+        "memory-bank": {
+            "command": "npx",
+            "args": ["-y", "@allpepper/memory-bank-mcp"],
+            "env": {
+                "MEMORY_BANK_ROOT": "C:/Users/eddki/Code/MCP/memory-banks"
+            }
+        },
+        "magic-ui": {
+            "command": "npx",
+            "args": ["-y", "@magicuidesign/mcp@latest"]
+        },
+        "TalkToFigma": {
+            "command": "npx",
+            "args": ["-y", "cursor-talk-to-figma-mcp@latest"]
+        },
+        "filesystem": {
+            "command": "docker",
+            "args": [
+                "run",
+                "-i",
+                "--rm",
+                "-v",
+                "c:/Users/eddki/Code/Projects/Personal/Productivity_Hub:/workspace",
+                "ghcr.io/mark3labs/mcp-filesystem-server:latest",
+                "/workspace"
+            ],
+            "env": {}
+        }
+    }
+}
