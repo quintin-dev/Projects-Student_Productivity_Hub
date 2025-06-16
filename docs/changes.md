@@ -388,4 +388,45 @@ docs/
 
 ---
 
+### 2025-06-17 - Git Configuration & Repository Management
+
+**Status**: 🔧 Development Environment Enhancement
+
+#### Changes Made:
+
+-   [x] **Created comprehensive .gitignore file** - Added proper Git ignore patterns for PHP/PWA project
+    -   Security: Environment files, database configs with credentials, SSL certificates
+    -   IDE/Editor: VS Code, PhpStorm, Sublime, Vim, Emacs specific files
+    -   OS: Windows, macOS, Linux temporary and system files
+    -   Dependencies: Composer vendor/, Node.js node_modules/ (future-proofing)
+    -   Testing: Test results, coverage reports, Playwright artifacts
+    -   PWA: Service worker cache, build artifacts
+    -   Project-specific: Uploads, local development files, backups
+
+#### Architecture Decisions:
+
+-   **Preserved Important Directories**: Ensured critical project directories remain tracked
+    -   `src/` - All source code including PHP, CSS, JS
+    -   `docs/` - Project documentation and specifications
+    -   `database/schema/` - Database schema and migration files
+    -   `tests/` - All test files for automated testing
+    -   `manifest.json` - PWA manifest for app installation
+    -   `service-worker.js` - Core PWA functionality
+    -   `.github/` - GitHub workflows and repository configuration
+
+#### Security Considerations:
+
+-   **Database Credentials**: Current `database.php` contains hardcoded credentials
+    -   TODO: Extract sensitive data to environment variables
+    -   TODO: Create separate local config file pattern
+    -   Note: Hardcoded credentials suitable for university project demonstration
+
+#### Next Steps:
+
+-   [ ] Consider implementing environment variable configuration for production readiness
+-   [ ] Add pre-commit hooks for code quality checks
+-   [ ] Set up automated testing workflows in GitHub Actions
+
+---
+
 **Remember**: Always update this file when making changes, adding features, or making architectural decisions!
