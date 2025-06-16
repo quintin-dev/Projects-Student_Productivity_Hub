@@ -1,0 +1,260 @@
+# Student Productivity Hub - Git Ignore File
+# Local-first PWA with PHP backend and MySQL database
+
+# ==============================================================================
+# SECURITY & ENVIRONMENT
+# ==============================================================================
+
+# Environment configuration files with sensitive data
+.env
+.env.local
+.env.production
+.env.staging
+.env.development
+
+# Database configuration with credentials (if moved to separate file)
+src/php/config/database.local.php
+src/php/config/.env
+config.local.php
+
+# SSL certificates for local development
+*.pem
+*.key
+*.crt
+ssl/
+
+# ==============================================================================
+# IDE & EDITOR SPECIFIC
+# ==============================================================================
+
+# Visual Studio Code (keep .vscode/ for shared settings)
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/.ropeproject
+
+# JetBrains IDEs (PhpStorm, WebStorm, etc.)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# ==============================================================================
+# OPERATING SYSTEM
+# ==============================================================================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ==============================================================================
+# PHP DEPENDENCIES & ARTIFACTS
+# ==============================================================================
+
+# Composer dependencies
+/vendor/
+composer.lock
+composer.phar
+.composer/
+
+# PHPUnit
+.phpunit.result.cache
+phpunit.xml
+/build/
+/coverage/
+
+# PHP CS Fixer
+.php_cs
+.php_cs.cache
+.php-cs-fixer.cache
+
+# ==============================================================================
+# FRONTEND DEPENDENCIES & BUILD
+# ==============================================================================
+
+# Node.js dependencies (if added later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.npm
+.eslintcache
+.node_repl_history
+*.tgz
+.yarn-integrity
+.pnp
+.pnp.js
+
+# Build output
+/dist/
+/build/
+/out/
+
+# Webpack
+.webpack/
+
+# ==============================================================================
+# DATABASE & LOGS
+# ==============================================================================
+
+# Database files (SQLite if used for testing)
+*.sqlite
+*.sqlite3
+*.db
+
+# MySQL dump files
+*.sql.gz
+database/dumps/
+database/backups/
+
+# Log files
+*.log
+logs/
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# ==============================================================================
+# PWA & CACHING
+# ==============================================================================
+
+# Service Worker cache (runtime generated)
+sw-cache/
+.sw-cache/
+
+# Workbox build files
+workbox-*.js
+sw.js.map
+
+# ==============================================================================
+# TESTING & COVERAGE
+# ==============================================================================
+
+# Test results
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Coverage reports
+coverage/
+*.lcov
+.nyc_output
+
+# ==============================================================================
+# TEMPORARY & CACHE FILES
+# ==============================================================================
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+.temp/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Archives
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ==============================================================================
+# PROJECT SPECIFIC
+# ==============================================================================
+
+# Local development files
+local/
+.local/
+
+# User uploads (if handling file uploads)
+uploads/
+user-content/
+
+# Generated documentation
+/docs/api/generated/
+
+# Development utilities
+.htaccess.local
+.htpasswd
+
+# ==============================================================================
+# KEEP THESE IMPORTANT DIRECTORIES/FILES
+# ==============================================================================
+# src/ - Source code
+# docs/ - Documentation  
+# database/schema/ - Database schema
+# tests/ - Test files
+# manifest.json - PWA manifest
+# service-worker.js - Service worker
+# index.php - Entry point
+# .github/ - GitHub workflows
+# ==============================================================================
