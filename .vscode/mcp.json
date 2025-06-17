@@ -51,21 +51,6 @@
                 "DSN": "mysql://root:MySql1234@localhost:3306/productivity_hub?sslmode=disable"
             }
         },
-        // "dbhub-mysql-productivity-hub-readonly": {
-        //     "command": "npx",
-        //     "args": [
-        //         "-y",
-        //         "@bytebase/dbhub",
-        //         "--transport",
-        //         "stdio",
-        //         "--readonly",
-        //         "--dsn",
-        //         "mysql://root:MySql1234@localhost:3306/productivity_hub?sslmode=disable"
-        //     ],
-        //     "env": {
-        //         "DSN": "mysql://root:MySql1234@localhost:3306/productivity_hub?sslmode=disable"
-        //     }
-        // },
         "memory-bank": {
             "command": "npx",
             "args": ["-y", "@allpepper/memory-bank-mcp"],
